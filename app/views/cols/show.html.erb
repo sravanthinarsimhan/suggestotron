@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @col.name %>
+</p>
+
+<p>
+  <strong>Age:</strong>
+  <%= @col.age %>
+</p>
+
+<p>
+  <strong>Sub:</strong>
+  <%= @col.sub %>
+</p>
+
+<%= link_to 'Edit', edit_col_path(@col) %> |
+<%= link_to 'Back', cols_path %>

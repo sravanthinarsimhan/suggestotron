@@ -1,0 +1,29 @@
+<h1>Listing cols</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Age</th>
+      <th>Sub</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @cols.each do |col| %>
+      <tr>
+        <td><%= col.name %></td>
+        <td><%= col.age %></td>
+        <td><%= col.sub %></td>
+        <td><%= link_to 'Show', col %></td>
+        <td><%= link_to 'Edit', edit_col_path(col) %></td>
+        <td><%= link_to 'Destroy', col, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Col', new_col_path %>
